@@ -13,6 +13,8 @@
 
 
 // Authentication routes
+
+
 Auth::routes();
 
 
@@ -22,3 +24,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 // Include Wave Routes
 Wave::routes();
+
+Route::group(['middleware' => 'wave'], function () {
+   Route::resource('accounts', AccountController::class);
+});
