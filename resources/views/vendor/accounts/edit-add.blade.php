@@ -3,7 +3,8 @@
     $add  = is_null($dataTypeContent->getKey());
 @endphp
 
-@extends('voyager::master')
+
+@extends('themes.tailwind.layouts.app')
 
 @section('css')
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -76,6 +77,7 @@
                                     @elseif ($row->type == 'relationship')
                                         @include('voyager::formfields.relationship', ['options' => $row->details])
                                     @else
+{{--                                        @dd(app('voyager')->formField($row, $dataType, $dataTypeContent))--}}
                                         {!! app('voyager')->formField($row, $dataType, $dataTypeContent) !!}
                                     @endif
 
