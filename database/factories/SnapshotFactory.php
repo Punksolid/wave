@@ -2,27 +2,27 @@
 
 namespace Database\Factories;
 
-use App\Account;
+use App\Snapshot;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class AccountFactory extends Factory
+class SnapshotFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Account::class;
+    protected $model = Snapshot::class;
 
     /**
      * Define the model's default state.
      *
      * @return array
      */
-    public function definition(): array
+    public function definition()
     {
         return [
-            'name' => $this->faker->company
+            //
         ];
     }
 }

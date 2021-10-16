@@ -15,6 +15,7 @@
 // Authentication routes
 
 
+
 Auth::routes();
 
 
@@ -27,4 +28,6 @@ Wave::routes();
 
 Route::group(['middleware' => 'wave'], function () {
    Route::resource('accounts', AccountController::class);
+   Route::resource('accounts.snapshots', AccountSnapshotController::class);
+
 });
